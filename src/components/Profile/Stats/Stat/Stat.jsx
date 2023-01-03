@@ -4,8 +4,8 @@ import { StatWrapper } from './Stat.styled'
 export const Stat = ({ counter, info }) => {
 	return <>
 		<StatWrapper>
-			<div>{info}</div>
-			<div>{counter}</div>
+			<li>{info}</li>
+			<li>{counter}</li>
 		</StatWrapper>
 	</>
 }

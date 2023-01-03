@@ -3,7 +3,7 @@ export const Description = ({ avatar, username, location, tag }) => {
 	return <>
 		<img src={avatar} alt="avatar" width='100px' />
 		<h1>{username}</h1>
-		<p>{tag}</p>
+		<p>@{tag}</p>
 		<p>{location}</p>
 	</>
 }

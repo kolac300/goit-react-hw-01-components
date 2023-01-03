@@ -1,5 +1,5 @@
-import { Description } from 'components/Description/Description'
-import { Stats } from 'components/Stats/Stats'
+import { Description } from 'components/Profile/Description/Description'
+import { Stats } from 'components/Profile/Stats/Stats'
 import PropTypes from 'prop-types'
 import { ProfileWrapper } from './Profile.styled'
 
@@ -21,11 +21,10 @@ Profile.propTypes = {
 			followers: PropTypes.number,
 			views: PropTypes.number,
 			likes: PropTypes.number
-		}),
+		}).isRequired,
 		avatar: PropTypes.string.isRequired,
 		username: PropTypes.string.isRequired,
 		location: PropTypes.string.isRequired,
 		tag: PropTypes.string.isRequired,
-
 	})
 }

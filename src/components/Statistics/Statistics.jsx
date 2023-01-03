@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types'
 import { List, Li, StatisticsWrapper } from './Statistics.styled'
 
-export const Statistics = ({ stats: files, title }) => {
+export const Statistics = ({ stats: items, title }) => {
 	return <>
 		<StatisticsWrapper>
-			<h2>{title}</h2>
+			{title ? <h2>{title}</h2> : null}
 			<List>
-				{files.map(file => {
-					return <Li color={Math.floor(Math.random() * 8)} key={file.id}>{file.label}<hr />{file.percentage} %</Li>
+				{items.map(item => {
+					return <Li color={Math.floor(Math.random() * 8)} key={item.id}>{item.label}<hr />{item.percentage} %</Li>
 				})}
 			</List>
 		</StatisticsWrapper>
@@ -16,7 +16,7 @@ export const Statistics = ({ stats: files, title }) => {
 
 Statistics.propTypes = {
 	stats: PropTypes.arrayOf(PropTypes.shape({
-		id: PropTypes.string,
+		id: PropTypes.string.isRequired,
 		label: PropTypes.string.isRequired,
 		percentage: PropTypes.number.isRequired
 	}),).isRequired
