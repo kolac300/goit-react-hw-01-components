@@ -18,13 +18,13 @@ export const Profile = ({ user: { avatar, username, location, tag, stats } }) =>
 Profile.propTypes = {
 	user: PropTypes.exact({
 		stats: PropTypes.exact({
-			followers: PropTypes.number,
-			views: PropTypes.number,
-			likes: PropTypes.number
+			followers: PropTypes.number.isRequired,
+			views: PropTypes.number.isRequired,
+			likes: PropTypes.number.isRequired
 		}).isRequired,
 		avatar: PropTypes.string.isRequired,
 		username: PropTypes.string.isRequired,
 		location: PropTypes.string.isRequired,
 		tag: PropTypes.string.isRequired,
-	})
+	}).isRequired
 }
